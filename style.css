@@ -1,0 +1,126 @@
+body {
+    background-image: url('https://www.ls-mebel.ru/upload/iblock/f24/f24ba44e8bd948f7644c9899f532a2a4.jpg');
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+.logo {
+    width: 100px;
+    height: auto;
+}
+nav {
+    background-color: #444;
+    padding: 1em;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin: 0 1em;
+    text-decoration: none;
+}
+main {
+    padding: 2em;
+    text-align: center;
+}
+.product {
+    display: inline-block;
+    margin: 1em;
+    text-align: center;
+}
+.product img {
+    width: 150px;
+    height: auto;
+}
+.marquee {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 15s linear infinite;
+}
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.swiper-container {
+    width: 600px;
+    height: 400px;
+    margin: 20px auto;
+}
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.map-container {
+    margin: 20px auto;
+    width: 600px;
+    height: 400px;
+}
+form {
+    margin: 20px auto;
+    width: 300px;
+    text-align: left;
+}
+form label {
+    display: block;
+    margin-top: 10px;
+}
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+form button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .swiper-container, .map-container {
+        width: 100%;
+        height: auto;
+    }
+    .swiper-slide img {
+        width: 100%;
+        height: auto;
+    }
+    form {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        display: block;
+        margin: 0.5em 0;
+    }
+    .marquee {
+        font-size: 14px;
+    }
+}
